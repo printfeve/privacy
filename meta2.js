@@ -6,11 +6,10 @@ function tongji(){
     for (var j=0;j<tables.rows[0].cells.length;j++){
         eval("statistics.cols"+j+"={}");
     }
-    //遍历
     for (var i=0;i<tables.rows.length;i++){
-       if (i>0){//跳过第一行
+       if (i>0){
          for (var j=0;j<tables.rows[i].cells.length;j++){
-            if(j>0){//跳过第一列
+            if(j>0){
                 text=tables.rows[i].cells[j].innerText;
                 if (text!=null){
                     typeof statistics["cols"+j][text]=="undefined"?statistics["cols"+j][text]=1:statistics["cols"+j][text]++;
